@@ -155,7 +155,7 @@ function addItens(element) {
   $(inputItem).val(element.name)
   $(inputItemValue).attr('type','number');
   $(inputItemValue).attr('oninput','salvarLocal()');
-  $(inputItem).val(element.value)
+  $(inputItemValue).val(element.value)
   $(colItemValue).addClass('col-4 pl-1');
   $(div).addClass('col-12 col-md-4 col-lg-3 info py-1');
   $(div).append(row);
