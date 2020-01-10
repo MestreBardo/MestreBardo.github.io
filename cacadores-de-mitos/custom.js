@@ -47,7 +47,7 @@ function loadFicha(){
 
 }
 $(document).ready(function(){
-  $('#userOfThisShit').text(JSON.parse(localStorage.getItem('usuario')));
+  $('#userOfThisShit').text('Usuario: ' + JSON.parse(localStorage.getItem('usuario')));
   $('#addRotulos').click(function(){
     const div = document.createElement('div');
     const input = document.createElement('input');
