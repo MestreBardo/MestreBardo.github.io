@@ -1,32 +1,47 @@
+if(localStorage.getItem('personagemCacadores')){
+  $.ajax({
+    url: 'https://tavernadobardobebado.herokuapp.com/personagem/setPersonagem',
+    type: 'post',
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify({usuario,'personagem':JSON.parse(localStorage.getItem('personagemCacadores'))})
+  })
+  localStorage.removeItem('personagemCacadores');
+}
+
 loadFicha();
 
 function loadFicha(){
-  const personagem = JSON.parse(localStorage.getItem('personagemCacadores'));
-  if(personagem !== null){
-    const attr = $('.attr');
-    const attrPersonagem = $('.attrPersonagem');
-    Array.from(attr).forEach(element => {
-      const label = $(element).find('small').text();
-      const input = $(element).find('input');
-      const value = personagem[`${label}`];
-      $(input).val(value);
-    });
-    Array.from(attrPersonagem).forEach((element,index) => {
-      const label = $(element).find('.attrPersonagemValor');
-      const input = $(element).find('.attrPersonagemModificador');
-      $(label).val(personagem.atributos[index].valor)
-      $(input).val(personagem.atributos[index].modificador);
-    });
-    personagem.rotulos.forEach(element => {
-      addRotulo(element);
-    })
-    personagem.itens.forEach(element => {
-      addItens(element);
-    })
-    personagem.bizarros.forEach(element => {
-      addBizarro(element);
-    })
-  }
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  $.get('https://tavernadobardobebado.herokuapp.com/personagem/getPersonagem',{usuario},function(data){
+    if(data){
+      let personagem = data.personagem;
+      const attr = $('.attr');
+      const attrPersonagem = $('.attrPersonagem');
+      Array.from(attr).forEach(element => {
+        const label = $(element).find('small').text();
+        const input = $(element).find('input');
+        const value = personagem[`${label}`];
+        $(input).val(value);
+      });
+      Array.from(attrPersonagem).forEach((element,index) => {
+        const label = $(element).find('.attrPersonagemValor');
+        const input = $(element).find('.attrPersonagemModificador');
+        console.log(personagem.atributos[index]);
+        $(label).val(personagem.atributos[index].valor)
+        $(input).val(personagem.atributos[index].modificador);
+      });
+      personagem.rotulos.forEach(element => {
+        addRotulo(element);
+      })
+      personagem.itens.forEach(element => {
+        addItens(element);
+      })
+      personagem.bizarros.forEach(element => {
+        addBizarro(element);
+      })
+    }
+  })
 
 }
 $(document).ready(function(){
@@ -87,21 +102,7 @@ $(document).ready(function(){
     $(colItemValue).append(inputItemValue);
     $(this).parent().prepend(div);
   })
-  $('input').on('input',salvarLocal);
-  $('#exportButton').click(function(){
-    let personagem = JSON.parse(localStorage.getItem('personagemCacadores'));
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(localStorage.getItem('personagemCacadores')));
-    element.setAttribute('download', personagem.Jogador);
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-
-    element.click();
-
-    document.body.removeChild(element);
-
-  })
+  $('input').on('input',salvarLocal)
 })
 
 function salvarLocal() {
@@ -131,19 +132,29 @@ function salvarLocal() {
     novoObjeto.rotulos.push($(element).val());
   });
   Array.from(itens).forEach(element => {
+    console.log($(element));
     const name = $(element).find('.novoItem').val();
     const value = $(element).find('.novoItemValue').val();
     novoObjeto.itens.push({'name' : name, 'value':value});
   });
   Array.from(bizarros).forEach(element => {
+    console.log($(element));
     const name = $(element).find('.novoBizarro').val();
     const value = $(element).find('.novoBizarroDescricao').val();
     novoObjeto.bizarros.push({'name' : name, 'value':value});
   });
-  localStorage.setItem('personagemCacadores',JSON.stringify(novoObjeto));
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  $.ajax({
+    url: 'https://tavernadobardobebado.herokuapp.com/personagem/setPersonagem',
+    type: 'post',
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify({usuario,'personagem':novoObjeto})
+  })
 }
 
 function addRotulo(element) {
+  console.log(element);
   const div = document.createElement('div');
   const input = document.createElement('input');
   $(input).addClass('form-control form-control-sm novoRotulo rotuloName');
@@ -204,4 +215,3 @@ function addBizarro(element) {
   $(colItemValue).append(inputItemValue);
   $('#bizarros').prepend(div);
 }
-
