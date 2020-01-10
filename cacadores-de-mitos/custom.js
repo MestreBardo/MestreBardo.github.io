@@ -9,6 +9,8 @@ if(localStorage.getItem('personagemCacadores')){
   localStorage.removeItem('personagemCacadores');
 }
 
+
+
 loadFicha();
 
 function loadFicha(){
@@ -45,6 +47,7 @@ function loadFicha(){
 
 }
 $(document).ready(function(){
+  $('#userOfThisShit').text(JSON.parse(localStorage.getItem('usuario')));
   $('#addRotulos').click(function(){
     const div = document.createElement('div');
     const input = document.createElement('input');
