@@ -1,3 +1,3 @@
 if(localStorage.getItem('token') === null){
-    window.location = 'https://tavernadobardobebado.herokuapp.com/login/login.html';
+    window.location = 'https://mestrebardo.github.io/login/login.html';
 }

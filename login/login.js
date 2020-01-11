@@ -31,7 +31,7 @@ $(document).ready(() => {
             }
         }).done(function(data){
             localStorage.setItem('token',JSON.stringify(data));
-            window.location = 'https://tavernadobardobebado.herokuapp.com/index.html';
+            window.location = 'https://mestrebardo.github.io/index.html';
         }).fail(function(){
             const li = document.createElement('li');
             $(li).addClass('list-group-item list-group-item-danger');
