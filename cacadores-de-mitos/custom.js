@@ -2,7 +2,7 @@ loadFicha();
 
 function loadFicha(){
   const usuario = JSON.parse(localStorage.getItem('token'));
-  $.get('http://localhost:5000/personagem/getPersonagem',{usuario},function(data){
+  $.get('https://tavernadobardobebado.herokuapp.com/personagem/getPersonagem',{usuario},function(data){
     if(data){
       let personagem = data.personagem;
       const attr = $('.attr');
@@ -135,7 +135,7 @@ function salvarLocal() {
   });
   const usuario = JSON.parse(localStorage.getItem('token'));
   $.ajax({
-    url: 'http://localhost:5000/personagem/setPersonagem',
+    url: 'https://tavernadobardobebado.herokuapp.com/personagem/setPersonagem',
     type: 'post',
     dataType: 'json',
     contentType: 'application/json',

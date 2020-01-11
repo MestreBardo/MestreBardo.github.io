@@ -28,7 +28,7 @@ $(document).ready(() => {
             return;
         }
         $.ajax({
-            url: 'http://localhost:5000/usuario/setUsuario',
+            url: 'https://tavernadobardobebado.herokuapp.com/usuario/setUsuario',
             type: 'post',
             dataType: 'json',
             contentType: 'application/json',
@@ -41,7 +41,7 @@ $(document).ready(() => {
             }
         }).done(function(data){
             localStorage.setItem('token',JSON.stringify(data));
-            window.location = 'http://localhost:5500/index.html';
+            window.location = 'https://tavernadobardobebado.herokuapp.com/index.html';
         })
     })
 })

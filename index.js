@@ -1,3 +1,3 @@
 if(localStorage.getItem('token') === null){
-    window.location = 'http://localhost:5500/login/login.html';
+    window.location = 'https://tavernadobardobebado.herokuapp.com/login/login.html';
 }
