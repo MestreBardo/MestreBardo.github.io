@@ -1,21 +1,8 @@
-if(localStorage.getItem('personagemCacadores')){
-  $.ajax({
-    url: 'https://tavernadobardobebado.herokuapp.com/personagem/setPersonagem',
-    type: 'post',
-    dataType: 'json',
-    contentType: 'application/json',
-    data: JSON.stringify({usuario,'personagem':JSON.parse(localStorage.getItem('personagemCacadores'))})
-  })
-  localStorage.removeItem('personagemCacadores');
-}
-
-
-
 loadFicha();
 
 function loadFicha(){
-  const usuario = JSON.parse(localStorage.getItem('usuario'));
-  $.get('https://tavernadobardobebado.herokuapp.com/personagem/getPersonagem',{usuario},function(data){
+  const usuario = JSON.parse(localStorage.getItem('token'));
+  $.get('http://localhost:5000/personagem/getPersonagem',{usuario},function(data){
     if(data){
       let personagem = data.personagem;
       const attr = $('.attr');
@@ -146,9 +133,9 @@ function salvarLocal() {
     const value = $(element).find('.novoBizarroDescricao').val();
     novoObjeto.bizarros.push({'name' : name, 'value':value});
   });
-  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  const usuario = JSON.parse(localStorage.getItem('token'));
   $.ajax({
-    url: 'https://tavernadobardobebado.herokuapp.com/personagem/setPersonagem',
+    url: 'http://localhost:5000/personagem/setPersonagem',
     type: 'post',
     dataType: 'json',
     contentType: 'application/json',
