@@ -1,0 +1,109 @@
+{
+  "configVersion": 1,
+  "timestamp": 1632430135472,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/539.fb2992f620f8547c9476.js",
+        "/769.1a63720d7367ca9e784f.js",
+        "/976.e1d4d2d376849cf42c9b.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.ddcdcb19b487397a48e9.js",
+        "/manifest.webmanifest",
+        "/polyfills.df5d46217bb5657f4eb1.js",
+        "/runtime.1169715547f6e40fdd2b.js",
+        "/styles.d235b135bf2ba5fefb4d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/administrador-bg-min.3dfe4f2397b4a87499fa.jpg",
+        "/assets/backgrounds/administrador-bg-min.jpg",
+        "/assets/backgrounds/bg-proadv-down.png",
+        "/assets/bg-proadv.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/logos/logo-admin.png",
+        "/assets/logos/oab-marca-oficial.png",
+        "/assets/logos/ps-branco.png",
+        "/proadv.3bcb4e512860ae2a57bc.eot",
+        "/proadv.588b0038b4cb697fa208.ttf",
+        "/proadv.9e3e47fba8953c0f6428.woff",
+        "/proadv.bd362d66f9d4a9c21261.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/539.fb2992f620f8547c9476.js": "bc608d21bdca14c852487a0de357bcc86eb258c7",
+    "/769.1a63720d7367ca9e784f.js": "746405b78bcf53a28259f32207a2b6ef3365f5a1",
+    "/976.e1d4d2d376849cf42c9b.js": "968702bd5a74684d83fcf829a28a8a3670219834",
+    "/administrador-bg-min.3dfe4f2397b4a87499fa.jpg": "229c45daf5f5d425cfc3aad7a8378f360208c93a",
+    "/assets/backgrounds/administrador-bg-min.jpg": "229c45daf5f5d425cfc3aad7a8378f360208c93a",
+    "/assets/backgrounds/bg-proadv-down.png": "4fcbf2cb584c46dffb87803a2e365b9b0109d8a3",
+    "/assets/bg-proadv.png": "4e5bca65b0c3384b27e48e4a392f68b4a95b2d16",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/logos/logo-admin.png": "e3605dbc7f5f58b3aeac48e5f6e4dda4ee866993",
+    "/assets/logos/oab-marca-oficial.png": "d69b483c1bfca5f4b80fe0c7441813a3f2329401",
+    "/assets/logos/ps-branco.png": "711c10bdd8b7e9864647d12ee266262dbd7494dd",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "b1800bbb3f301b1bf04f6be45e5141dda2395aca",
+    "/main.ddcdcb19b487397a48e9.js": "360df03e0d6bf568f6a4a9225a84551ae93ba9f3",
+    "/manifest.webmanifest": "a149355a5f299412f14d013e0016f3e8288a7a51",
+    "/polyfills.df5d46217bb5657f4eb1.js": "ce6bb1834b32bf09c6f33cde8ec817156bd2e601",
+    "/proadv.3bcb4e512860ae2a57bc.eot": "90741be961e37cb2a4c4ad67b0853558bb1aafa0",
+    "/proadv.588b0038b4cb697fa208.ttf": "b0bf16ed094811c4d9d9a1cba2b7400d2305e91f",
+    "/proadv.9e3e47fba8953c0f6428.woff": "e4636de818324960189980cf34abd359db9a570c",
+    "/proadv.bd362d66f9d4a9c21261.svg": "d0fea3bd64564a9394b4f382bee0116ecce16b51",
+    "/runtime.1169715547f6e40fdd2b.js": "be3838263b485e29675b2e9cbf5035d1f9052dc7",
+    "/styles.d235b135bf2ba5fefb4d.css": "e7b6df793cb29d77b6ac752baa829b43a920dd56"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
